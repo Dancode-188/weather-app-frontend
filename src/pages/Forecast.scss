@@ -1,0 +1,91 @@
+// src/pages/Forecast.scss
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.forecast-page {
+  .date-selector {
+    margin-bottom: $spacing-medium;
+
+    input[type="date"] {
+      padding: $spacing-small;
+      font-size: $font-size-base;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+    }
+  }
+
+  .forecast-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: $spacing-medium;
+
+    .forecast-list {
+      .forecast-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $spacing-small 0;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .date {
+          font-weight: bold;
+        }
+
+        .temperature {
+          color: $primary-color;
+        }
+
+        .description {
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .forecast-description {
+      margin-bottom: $spacing-medium;
+      line-height: 1.5;
+    }
+
+    .forecast-graph {
+      margin-bottom: $spacing-medium;
+      // Add styles for the forecast graph
+    }
+
+    .forecast-imagery {
+      margin-bottom: $spacing-medium;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .sidebar {
+    background-color: $background-color;
+    padding: $spacing-medium;
+    border-radius: 4px;
+
+    > div {
+      margin-bottom: $spacing-medium;
+
+      p {
+        margin-bottom: $spacing-small;
+      }
+    }
+  }
+
+  .share-export {
+    margin-top: $spacing-medium;
+    text-align: right;
+
+    button {
+      @include button-styles;
+      margin-left: $spacing-small;
+    }
+  }
+}

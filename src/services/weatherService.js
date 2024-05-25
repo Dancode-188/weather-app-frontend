@@ -79,3 +79,59 @@ export const getAirQualityIndexByLocation = async (latitude, longitude) => {
     throw error;
   }
 };
+
+export const getForecastData = async (date) => {
+  try {
+    const response = await api.get('/forecast', {
+      params: {
+        date: date.toISOString().split('T')[0],
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching forecast data:', error);
+    throw error;
+  }
+};
+
+export const getSunriseSunsetData = async (date) => {
+  try {
+    const response = await api.get('/sunrise-sunset', {
+      params: {
+        date: date.toISOString().split('T')[0],
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching sunrise/sunset data:', error);
+    throw error;
+  }
+};
+
+export const getMoonPhaseData = async (date) => {
+  try {
+    const response = await api.get('/moon-phase', {
+      params: {
+        date: date.toISOString().split('T')[0],
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching moon phase data:', error);
+    throw error;
+  }
+};
+
+export const getHistoricalAverages = async (date) => {
+  try {
+    const response = await api.get('/historical-averages', {
+      params: {
+        date: date.toISOString().split('T')[0],
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching historical averages:', error);
+    throw error;
+  }
+};
