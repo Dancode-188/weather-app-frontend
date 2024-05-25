@@ -1,0 +1,76 @@
+// Sidebar.scss
+@import '../styles/variables';
+
+.sidebar {
+  width: 300px;
+  padding: $spacing-medium;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    margin-bottom: $spacing-medium;
+    font-size: 1.2rem;
+  }
+
+  .map-legend {
+    margin-bottom: $spacing-large;
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-small;
+
+      .legend-color {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: $spacing-small;
+        border-radius: 50%;
+      }
+
+      .legend-label {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .layer-settings {
+    margin-bottom: $spacing-large;
+
+    .layer-item {
+      margin-bottom: $spacing-small;
+
+      input[type='checkbox'] {
+        margin-right: $spacing-small;
+      }
+
+      label {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .location-search {
+    input[type='text'] {
+      width: 100%;
+      padding: $spacing-small;
+      margin-bottom: $spacing-small;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: $spacing-small $spacing-medium;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}

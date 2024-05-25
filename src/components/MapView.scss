@@ -1,10 +1,9 @@
 // MapView.scss
-
 @import '../styles/variables';
 
 .map-view {
   position: relative;
-  height: 400px;
+  height: 100%;
 
   .map-container {
     position: absolute;
@@ -19,6 +18,7 @@
     top: $spacing-medium;
     right: $spacing-medium;
     z-index: 1000;
+    display: flex;
 
     button {
       margin-left: $spacing-small;
@@ -28,6 +28,11 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
     }
   }
 }
