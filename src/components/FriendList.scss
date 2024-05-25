@@ -1,40 +1,51 @@
+// FriendList.scss
+
+@import '../styles/variables';
+
 .friend-list {
-    .friend-item {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
+  margin-top: $spacing-large;
 
-      .avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 10px;
+  .friend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-medium;
+    background-color: $background-color;
+    border-radius: 8px;
+    margin-bottom: $spacing-medium;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: $spacing-medium;
+    }
+
+    .friend-info {
+      flex-grow: 1;
+
+      .friend-name {
+        font-size: $font-size-base;
+        font-weight: bold;
+        margin-bottom: $spacing-small;
       }
 
-      .friend-info {
-        flex-grow: 1;
-
-        .friend-name {
-          font-weight: bold;
-        }
-
-        .friend-location {
-          font-size: 14px;
-          color: #666;
-        }
-      }
-
-      .friend-actions {
-        button {
-          margin-left: 10px;
-          padding: 5px 10px;
-          background-color: #fff;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          font-size: 14px;
-          cursor: pointer;
-        }
+      .friend-location {
+        font-size: $font-size-small;
       }
     }
+
+    .friend-actions {
+      button {
+        margin-left: $spacing-small;
+        padding: $spacing-small $spacing-medium;
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+  }
 }

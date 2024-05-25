@@ -1,3 +1,5 @@
+// ForecastList.js
+
 import PropTypes from 'prop-types';
 import './ForecastList.scss';
 

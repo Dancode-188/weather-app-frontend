@@ -1,29 +1,41 @@
+// WeatherCard.scss
+
+@import '../styles/variables';
+
 .weather-card {
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  background-color: $background-color;
+  border-radius: 8px;
+  padding: $spacing-medium;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 
-    .location {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
+  .location {
+    font-size: $font-size-large;
+    font-weight: bold;
+    margin-bottom: $spacing-small;
+  }
 
-    .temperature {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
+  .temperature {
+    font-size: $font-size-large * 1.5;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: $spacing-medium;
+  }
 
-    .description {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
+  .description {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-small;
+  }
 
-    img {
-      width: 50px;
-      height: 50px;
-    }
+  .humidity,
+  .wind-speed {
+    font-size: $font-size-small;
+    margin-bottom: $spacing-small;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-top: $spacing-medium;
+  }
 }

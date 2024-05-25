@@ -1,7 +1,26 @@
+// LeaderboardTable.js
+
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './LeaderboardTable.scss';
+import { getLeaderboard } from '../services/LeaderboardService';
 
-const LeaderboardTable = ({ leaderboardData }) => {
+const LeaderboardTable = () => {
+  const [leaderboardData, setLeaderboardData] = useState([]);
+
+  useEffect(() => {
+    const fetchLeaderboard = async () => {
+      try {
+        const leaderboard = await getLeaderboard();
+        setLeaderboardData(leaderboard);
+      } catch (error) {
+        console.error('Error retrieving leaderboard:', error);
+      }
+    };
+
+    fetchLeaderboard();
+  }, []);
+
   return (
     <table className="leaderboard-table">
       <thead>
@@ -14,7 +33,7 @@ const LeaderboardTable = ({ leaderboardData }) => {
       </thead>
       <tbody>
         {leaderboardData.map((entry, index) => (
-          <tr key={index}>
+          <tr key={entry.id}>
             <td>{index + 1}</td>
             <td>{entry.user}</td>
             <td>{entry.points}</td>
@@ -29,6 +48,7 @@ const LeaderboardTable = ({ leaderboardData }) => {
 LeaderboardTable.propTypes = {
   leaderboardData: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string.isRequired,
       user: PropTypes.string.isRequired,
       points: PropTypes.number.isRequired,
       badges: PropTypes.number.isRequired,

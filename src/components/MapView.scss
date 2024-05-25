@@ -1,26 +1,33 @@
+// MapView.scss
+
+@import '../styles/variables';
+
 .map-view {
-    position: relative;
-    height: 400px;
+  position: relative;
+  height: 400px;
 
-    .map-container {
-      height: 100%;
-      // Add styles for the map container
+  .map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .map-controls {
+    position: absolute;
+    top: $spacing-medium;
+    right: $spacing-medium;
+    z-index: 1000;
+
+    button {
+      margin-left: $spacing-small;
+      padding: $spacing-small $spacing-medium;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
-
-    .map-controls {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 1;
-
-      button {
-        margin-left: 10px;
-        padding: 8px 12px;
-        background-color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 14px;
-        cursor: pointer;
-      }
-    }
+  }
 }

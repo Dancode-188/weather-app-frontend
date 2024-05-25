@@ -1,20 +1,30 @@
+// LeaderboardTable.scss
+
+@import '../styles/variables';
+
 .leaderboard-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: $spacing-large;
 
-    th,
-    td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
-    }
+  th,
+  td {
+    padding: $spacing-medium;
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+  }
 
-    th {
-      background-color: #f0f0f0;
-      font-weight: bold;
-    }
+  th {
+    font-weight: bold;
+    background-color: $secondary-color;
+    color: #fff;
+  }
 
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
+  tr:nth-child(even) {
+    background-color: $background-color;
+  }
+
+  tr:hover {
+    background-color: darken($background-color, 5%);
+  }
 }

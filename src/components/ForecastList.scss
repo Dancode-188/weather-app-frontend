@@ -1,38 +1,42 @@
+// ForecastList.scss
+
+@import '../styles/variables';
+
 .forecast-list {
-    display: flex;
-    overflow-x: auto;
-    padding: 1rem;
-    background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: $spacing-medium;
+  margin-top: $spacing-large;
 
-    .forecast-item {
-      flex: 0 0 auto;
-      padding: 1rem;
-      background-color: #fff;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin-right: 1rem;
+  .forecast-item {
+    background-color: $background-color;
+    border-radius: 8px;
+    padding: $spacing-medium;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 
-      .date {
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-      }
-
-      .temperature {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-      }
-
-      .description {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-      }
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
+    .date {
+      font-size: $font-size-base;
+      font-weight: bold;
+      margin-bottom: $spacing-small;
     }
+
+    .temperature {
+      font-size: $font-size-large;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: $spacing-small;
+    }
+
+    .description {
+      font-size: $font-size-small;
+      margin-bottom: $spacing-small;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-top: $spacing-small;
+    }
+  }
 }

@@ -1,28 +1,40 @@
+// AlertNotification.scss
+
+@import '../styles/variables';
+
 .alert-notification {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    font-size: 14px;
+  padding: $spacing-medium;
+  border-radius: 4px;
+  margin-bottom: $spacing-medium;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    &.info {
-      background-color: #e0f7fa;
-      color: #0288d1;
-    }
+  p {
+    margin: 0;
+    font-size: $font-size-base;
+  }
 
-    &.warning {
-      background-color: #fff3e0;
-      color: #f57c00;
-    }
+  button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: $font-size-base;
+    cursor: pointer;
+  }
 
-    &.error {
-      background-color: #ffebee;
-      color: #d32f2f;
-    }
+  &.info {
+    background-color: #e6f7ff;
+    color: #0077cc;
+  }
 
-    button {
-      float: right;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
+  &.warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
 }
