@@ -1,0 +1,32 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.home-page {
+  display: flex;
+
+  .main-content {
+    flex: 1;
+    padding: $spacing-medium;
+
+    .widgets-grid {
+      @include responsive-grid;
+    }
+
+    .widget {
+      background-color: #fff;
+      padding: $spacing-medium;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        margin-bottom: $spacing-medium;
+      }
+    }
+  }
+
+  .sidebar {
+    width: 300px;
+    padding: $spacing-medium;
+    background-color: $background-color;
+  }
+}

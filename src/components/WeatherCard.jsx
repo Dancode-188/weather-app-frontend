@@ -1,9 +1,30 @@
-// WeatherCard.js
-
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { getWeatherByLocation } from '../services/weatherService';
 import './WeatherCard.scss';
 
-const WeatherCard = ({ location, temperature, humidity, windSpeed, description, icon }) => {
+const WeatherCard = ({ latitude, longitude }) => {
+  const [weather, setWeather] = useState(null);
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const data = await getWeatherByLocation(latitude, longitude);
+        setWeather(data);
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+      }
+    };
+
+    fetchWeather();
+  }, [latitude, longitude]);
+
+  if (!weather) {
+    return <div>Loading...</div>;
+  }
+
+  const { name: location, main: { temp: temperature, humidity }, wind: { speed: windSpeed }, weather: [{ description, icon }] } = weather;
+
   return (
     <div className="weather-card">
       <div className="location">{location}</div>
@@ -17,12 +38,8 @@ const WeatherCard = ({ location, temperature, humidity, windSpeed, description, 
 };
 
 WeatherCard.propTypes = {
-  location: PropTypes.string.isRequired,
-  temperature: PropTypes.number.isRequired,
-  humidity: PropTypes.number.isRequired,
-  windSpeed: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  latitude: PropTypes.number.isRequired,
+  longitude: PropTypes.number.isRequired,
 };
 
 export default WeatherCard;

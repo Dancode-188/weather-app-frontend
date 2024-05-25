@@ -1,5 +1,3 @@
-// AlertNotification.js
-
 import PropTypes from 'prop-types';
 import './AlertNotification.scss';
 
