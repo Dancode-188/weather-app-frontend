@@ -1,15 +1,11 @@
-import axios from 'axios';
-
-const BASE_URL = 'https://api.openweathermap.org/data/2.5';
-const API_KEY = 'YOUR_API_KEY';
+import api from './api';
 
 export const getWeatherByLocation = async (latitude, longitude) => {
   try {
-    const response = await axios.get(`${BASE_URL}/weather`, {
+    const response = await api.get('/weather', {
       params: {
         lat: latitude,
         lon: longitude,
-        appid: API_KEY,
         units: 'metric',
       },
     });
@@ -22,11 +18,10 @@ export const getWeatherByLocation = async (latitude, longitude) => {
 
 export const getForecastByLocation = async (latitude, longitude) => {
   try {
-    const response = await axios.get(`${BASE_URL}/forecast`, {
+    const response = await api.get('/forecast', {
       params: {
         lat: latitude,
         lon: longitude,
-        appid: API_KEY,
         units: 'metric',
       },
     });
