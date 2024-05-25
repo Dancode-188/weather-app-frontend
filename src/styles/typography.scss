@@ -1,0 +1,22 @@
+h1 {
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+
+h2 {
+    font-size: $font-size-large * 0.8;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: $spacing-medium;
+    line-height: 1.5;
+}
+
+.text-emphasis {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}

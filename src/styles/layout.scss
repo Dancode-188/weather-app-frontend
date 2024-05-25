@@ -1,0 +1,21 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $spacing-medium;
+}
+
+header {
+    background-color: $primary-color;
+    padding: $spacing-medium;
+}
+
+footer {
+    background-color: $secondary-color;
+    padding: $spacing-medium;
+    text-align: center;
+}
+
+.sidebar {
+    width: 300px;
+    padding: $spacing-medium;
+}

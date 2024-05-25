@@ -1,0 +1,20 @@
+@mixin button-styles {
+    padding: $spacing-small $spacing-medium;
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@mixin responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: $spacing-medium;
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
