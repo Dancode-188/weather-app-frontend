@@ -1,32 +1,30 @@
-import { Route, Switch } from 'react-router-dom';
-import {
-  Home,
-  Forecast,
-  Maps,
-  Alerts,
-  SocialFeedPage,
-  UserProfilePage,
-  Friends,
-  Leaderboards,
-  Education,
-  Settings,
-} from './pages';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Forecast from './pages/Forecast';
+import Maps from './pages/Maps';
+import Alerts from './pages/Alerts';
+import SocialFeed from './pages/SocialFeed';
+import UserProfile from './pages/UserProfile';
+import Friends from './pages/Friends';
+import Leaderboards from './pages/Leaderboards';
+import Education from './pages/Education';
+import Settings from './pages/Settings';
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/forecast" component={Forecast} />
-      <Route path="/maps" component={Maps} />
-      <Route path="/alerts" component={Alerts} />
-      <Route path="/social-feed" component={SocialFeedPage} />
-      <Route path="/profile" component={UserProfilePage} />
-      <Route path="/friends" component={Friends} />
-      <Route path="/leaderboards" component={Leaderboards} />
-      <Route path="/education" component={Education} />
-      <Route path="/settings" component={Settings} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/forecast" element={<Forecast />} />
+      <Route path="/maps" element={<Maps />} />
+      <Route path="/alerts" element={<Alerts />} />
+      <Route path="/social-feed" element={<SocialFeed />} />
+      <Route path="/profile" element={<UserProfile />} />
+      <Route path="/friends" element={<Friends />} />
+      <Route path="/leaderboards" element={<Leaderboards />} />
+      <Route path="/education" element={<Education />} />
+      <Route path="/settings" element={<Settings />} />
+    </Routes>
   );
 };
 
-export default Routes;
+export default AppRoutes;

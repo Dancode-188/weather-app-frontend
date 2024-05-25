@@ -1,4 +1,4 @@
-import { MapView } from '../components';
+import MapView from '../components/MapView';
 
 const Maps = () => {
   return (

@@ -1,4 +1,5 @@
-import { EducationArticle } from '../components';
+// src/pages/Education.jsx
+import EducationArticle from '../components/EducationArticle';
 
 const Education = () => {
   return (

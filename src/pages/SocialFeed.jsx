@@ -1,4 +1,4 @@
-import { SocialFeed } from '../components';
+import SocialFeed from '../components/SocialFeed';
 
 const SocialFeedPage = () => {
   return (

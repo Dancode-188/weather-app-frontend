@@ -1,4 +1,5 @@
-import { ForecastList } from '../components';
+// src/pages/Forecast.jsx
+import ForecastList from '../components/ForecastList';
 
 const Forecast = () => {
   return (

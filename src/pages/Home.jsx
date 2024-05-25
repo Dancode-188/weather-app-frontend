@@ -1,4 +1,5 @@
-import { WeatherCard, ForecastList } from '../components';
+import WeatherCard from '../components/WeatherCard';
+import ForecastList  from '../components/ForecastList';
 
 const Home = () => {
   return (

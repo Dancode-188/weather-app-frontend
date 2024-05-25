@@ -1,4 +1,5 @@
-import { AlertNotification } from '../components';
+// src/pages/Alerts.jsx
+import AlertNotification from '../components/AlertNotification';
 
 const Alerts = () => {
   return (
