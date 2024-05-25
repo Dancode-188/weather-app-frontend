@@ -1,0 +1,40 @@
+.friend-list {
+    .friend-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .friend-info {
+        flex-grow: 1;
+
+        .friend-name {
+          font-weight: bold;
+        }
+
+        .friend-location {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      .friend-actions {
+        button {
+          margin-left: 10px;
+          padding: 5px 10px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+}
