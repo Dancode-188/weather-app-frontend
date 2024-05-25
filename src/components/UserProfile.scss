@@ -1,0 +1,40 @@
+.user-profile {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    .profile-details {
+      margin-bottom: 20px;
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    .profile-preferences,
+    .profile-activity {
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+}
