@@ -29,3 +29,23 @@ export const likePost = async (postId) => {
     throw error;
   }
 };
+
+export const getHashtags = async () => {
+  try {
+    const response = await api.get('/hashtags');
+    return response.data;
+  } catch (error) {
+    console.error('Error retrieving hashtags:', error);
+    throw error;
+  }
+};
+
+export const getTopContributors = async () => {
+  try {
+    const response = await api.get('/contributors');
+    return response.data;
+  } catch (error) {
+    console.error('Error retrieving top contributors:', error);
+    throw error;
+  }
+};

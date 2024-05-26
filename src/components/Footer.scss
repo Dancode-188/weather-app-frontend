@@ -8,6 +8,19 @@
   font-size: 0.9rem;
   color: #fff;
 
+  .content-guidelines,
+  .moderation-policy {
+    margin-bottom: $spacing-medium;
+
+    h4 {
+      margin-bottom: $spacing-small;
+    }
+
+    p {
+      margin-bottom: $spacing-small;
+    }
+  }
+
   p {
     margin-bottom: $spacing-small;
   }

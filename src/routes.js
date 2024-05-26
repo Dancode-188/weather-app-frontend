@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Forecast from './pages/Forecast';
 import Maps from './pages/Maps';
 import Alerts from './pages/Alerts';
-import SocialFeed from './pages/SocialFeed';
+import SocialFeedPage from './pages/SocialFeedPage';
 import UserProfile from './pages/UserProfile';
 import Friends from './pages/Friends';
 import Leaderboards from './pages/Leaderboards';
@@ -17,7 +17,7 @@ const AppRoutes = () => {
       <Route path="/forecast" element={<Forecast />} />
       <Route path="/maps" element={<Maps />} />
       <Route path="/alerts" element={<Alerts />} />
-      <Route path="/social-feed" element={<SocialFeed />} />
+      <Route path="/social-feed" element={<SocialFeedPage />} />
       <Route path="/profile" element={<UserProfile />} />
       <Route path="/friends" element={<Friends />} />
       <Route path="/leaderboards" element={<Leaderboards />} />

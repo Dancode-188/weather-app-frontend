@@ -1,0 +1,13 @@
+// SocialFeedPage.scss
+@import '../styles/variables';
+
+.social-feed-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-medium;
+
+  h2 {
+    font-size: $font-size-large;
+    margin-bottom: $spacing-medium;
+  }
+}
