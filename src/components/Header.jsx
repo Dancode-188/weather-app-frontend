@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
@@ -6,12 +7,21 @@ const Header = () => {
       <div className="logo">Weather App</div>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/forecast">Forecast</a></li>
-          <li><a href="/maps">Maps</a></li>
-          <li><a href="/alerts">Alerts</a></li>
-          <li><a href="/social-feed">Social Feed</a></li>
-          <li><a href="/profile">Profile</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/forecast">Forecast</Link></li>
+          <li><Link to="/maps">Maps</Link></li>
+          <li><Link to="/alerts">Alerts</Link></li>
+          <li><Link to="/social-feed">Social Feed</Link></li>
+          <li className="dropdown">
+            <Link to="/profile">Profile</Link>
+            <ul className="dropdown-menu">
+              <li><Link to="/profile">View Profile</Link></li>
+              <li><Link to="/friends">Friends</Link></li>
+              <li><Link to="/leaderboards">Leaderboards</Link></li>
+              <li><Link to="/education">Education</Link></li>
+              <li><Link to="/settings">Settings</Link></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
