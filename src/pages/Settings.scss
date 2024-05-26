@@ -1,0 +1,66 @@
+// src/pages/Settings.scss
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+    padding: $spacing-medium;
+
+    h2 {
+      margin-bottom: $spacing-large;
+    }
+
+    .settings-form {
+      margin-bottom: $spacing-large;
+
+      .form-group {
+        margin-bottom: $spacing-medium;
+
+        label {
+          display: block;
+          margin-bottom: $spacing-small;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+          width: 100%;
+          padding: $spacing-small;
+          border: 1px solid $border-color;
+          border-radius: 4px;
+        }
+
+        .checkbox-group {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            margin-bottom: $spacing-small;
+          }
+        }
+      }
+
+      button[type="submit"] {
+        @include button-styles;
+      }
+    }
+
+    button {
+      @include button-styles;
+    }
+  }
+}
+
+// Responsive Styles
+@media screen and (min-width: $breakpoint-medium) {
+  .settings-page {
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
