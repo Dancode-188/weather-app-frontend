@@ -1,0 +1,91 @@
+// src/pages/Alerts.scss
+@import '../styles/variables';
+@import '../styles/mixins';
+@import '../styles/utilities';
+
+.alerts-page {
+  main {
+    @extend .container !optional;
+    padding: $spacing-medium;
+  }
+
+  h2 {
+    @extend h2 !optional;
+    margin-bottom: $spacing-medium;
+  }
+
+  .alerts-container {
+    display: flex;
+    gap: $spacing-medium;
+
+    .sidebar {
+      @extend .sidebar !optional;
+      background-color: $background-color;
+      border-radius: 4px;
+
+      h3 {
+        @extend h2 !optional;
+        font-size: $font-size-base;
+        margin-bottom: $spacing-medium;
+      }
+
+      div {
+        margin-bottom: $spacing-small;
+      }
+
+      label {
+        display: block;
+        margin-bottom: $spacing-small;
+        color: $text-color-secondary;
+      }
+
+      select {
+        width: 100%;
+        padding: $spacing-small;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        background-color: #fff;
+        color: $text-color;
+      }
+    }
+
+    .alerts-list {
+      flex: 1;
+
+      .alert-notification {
+        margin-bottom: $spacing-medium;
+        padding: $spacing-medium;
+        border-radius: 4px;
+
+        &.info {
+          background-color: lighten($primary-color, 40%);
+        }
+
+        &.warning {
+          background-color: lighten($secondary-color, 40%);
+        }
+
+        &.error {
+          background-color: lighten(red, 40%);
+        }
+
+        h3 {
+          @extend h2 !optional;
+          font-size: $font-size-base;
+          margin-bottom: $spacing-small;
+        }
+
+        p {
+          @extend p !optional;
+          margin-bottom: $spacing-small;
+          color: $text-color-secondary;
+        }
+
+        button {
+          @include button-styles;
+          margin-top: $spacing-small;
+        }
+      }
+    }
+  }
+}
