@@ -1,0 +1,68 @@
+// Sidebar.scss
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .friend-requests,
+    .suggested-friends,
+    .invites {
+      margin-bottom: 20px;
+    }
+
+    .friend-request,
+    .suggested-friend,
+    .invite {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .friend-info,
+      .invite-info {
+        flex: 1;
+      }
+
+      .friend-name,
+      .invite-name {
+        font-weight: bold;
+      }
+
+      .friend-actions,
+      .invite-message {
+        margin-top: 5px;
+      }
+
+      button {
+        padding: 6px 12px;
+        font-size: 14px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 5px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+}

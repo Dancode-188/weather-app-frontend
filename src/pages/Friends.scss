@@ -1,0 +1,27 @@
+// Friends.scss
+.friends-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .container {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+
+      .main-content {
+        flex: 1;
+        margin-right: 20px;
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          font-size: 24px;
+        }
+      }
+
+      .sidebar {
+        width: 300px;
+      }
+    }
+}
