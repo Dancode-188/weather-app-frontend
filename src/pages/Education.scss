@@ -1,0 +1,141 @@
+// src/pages/Education.scss
+.education-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .education-header {
+    background-color: #f0f0f0;
+    padding: 20px;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 10px;
+
+          a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .search-bar {
+      display: flex;
+
+      input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .education-content {
+    flex: 1;
+    padding: 20px;
+
+    .articles-section,
+    .videos-section,
+    .podcasts-section,
+    .quizzes-section,
+    .forums-section {
+      margin-bottom: 30px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .education-sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+
+    .popular-topics,
+    .trending-articles,
+    .user-bookmarks {
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 8px;
+
+          a {
+            text-decoration: none;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .education-footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+
+    .attributions,
+    .sources,
+    .additional-resources {
+      margin-bottom: 20px;
+
+      h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 5px;
+
+          a {
+            text-decoration: none;
+            color: #333;
+          }
+        }
+      }
+    }
+}
