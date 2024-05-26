@@ -28,3 +28,13 @@ export const logout = async () => {
     throw error;
   }
 };
+
+export const getCurrentUserId = async () => {
+  try {
+    const response = await api.get('/auth/currentUser');
+    return response.data.userId;
+  } catch (error) {
+    console.error('Error retrieving current user ID:', error);
+    throw error;
+  }
+};

@@ -1,0 +1,32 @@
+// LeaderboardSidebar.scss
+@import '../styles/variables';
+
+.leaderboard-sidebar {
+  background-color: $background-color;
+  padding: $spacing-medium;
+  border-radius: 4px;
+
+  h3 {
+    margin-bottom: $spacing-medium;
+    color: $primary-color;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: $spacing-small;
+    }
+  }
+
+  .achievement {
+    margin-bottom: $spacing-medium;
+
+    p {
+      margin: 0;
+      color: $text-color-secondary;
+    }
+  }
+}

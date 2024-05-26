@@ -19,3 +19,23 @@ export const updateUserProfile = async (userId, profileData) => {
     throw error;
   }
 };
+
+export const getUserStats = async (userId) => {
+  try {
+    const response = await api.get(`/users/${userId}/stats`);
+    return response.data;
+  } catch (error) {
+    console.error('Error retrieving user stats:', error);
+    throw error;
+  }
+};
+
+export const getUserAchievements = async (userId) => {
+  try {
+    const response = await api.get(`/users/${userId}/achievements`);
+    return response.data;
+  } catch (error) {
+    console.error('Error retrieving user achievements:', error);
+    throw error;
+  }
+};

@@ -1,0 +1,16 @@
+// LeaderboardTypeSelector.scss
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.leaderboard-type-selector {
+  margin-bottom: $spacing-large;
+
+  .type-button {
+    @include button-styles;
+    margin-right: $spacing-small;
+
+    &.active {
+      background-color: $secondary-color;
+    }
+  }
+}
