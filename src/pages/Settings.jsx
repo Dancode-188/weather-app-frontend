@@ -1,7 +1,5 @@
 // src/pages/Settings.jsx
 import { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import SettingsForm from '../components/SettingsForm';
 import { getUserSettings, updateUserSettings } from '../services/settingsService';
 import { getUserProfile, updateUserProfile } from '../services/userService';
@@ -114,7 +112,6 @@ const Settings = () => {
 
   return (
     <div className="settings-page">
-      <Header />
       <main>
         <h2>Settings</h2>
         <SettingsForm
@@ -126,7 +123,6 @@ const Settings = () => {
         />
         <button onClick={handleLogout}>Logout</button>
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 // src/pages/Alerts.jsx
 import { useState, useEffect } from 'react';
 import AlertNotification from '../components/AlertNotification';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { getAlerts, getAlertTypes, getAlertSeverities, getAlertLocations } from '../services/alertService';
 import './Alerts.scss';
 
@@ -79,7 +77,6 @@ const Alerts = () => {
 
   return (
     <div className="alerts-page">
-      <Header />
       <main>
         <h2>Weather Alerts</h2>
         <div className="alerts-container">
@@ -141,7 +138,6 @@ const Alerts = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

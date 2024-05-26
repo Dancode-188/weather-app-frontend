@@ -5,8 +5,6 @@ import { TwitterShareButton, FacebookShareButton } from 'react-share';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import ForecastList from '../components/ForecastList';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import ForecastGraph from '../components/ForecastGraph';
 import { getForecastData, getSunriseSunsetData, getMoonPhaseData, getHistoricalAverages } from '../services/weatherService';
 import './Forecast.scss';
@@ -67,7 +65,6 @@ const Forecast = () => {
 
   return (
     <div className="forecast-page">
-      <Header />
       <main className="container">
         <h2>Detailed Forecast</h2>
         <div className="date-selector">
@@ -116,7 +113,6 @@ const Forecast = () => {
           )}
         </div>
       </main>
-      <Footer />
       <div className="share-export">
         <TwitterShareButton url={window.location.href} title={`Check out the weather forecast for ${format(selectedDate, 'MMMM d, yyyy')}`}>
           Share on Twitter
