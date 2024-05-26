@@ -31,6 +31,16 @@
           }
 
           &.dropdown {
+            .dropdown-toggle {
+              cursor: pointer;
+              color: #333;
+              transition: color 0.3s;
+
+              &:hover {
+                color: #007bff;
+              }
+            }
+
             &:hover {
               .dropdown-menu {
                 display: block;
@@ -81,6 +91,16 @@
             margin: 0.5rem 0;
 
             &.dropdown {
+              .dropdown-toggle {
+                cursor: pointer;
+                color: #333;
+                transition: color 0.3s;
+
+                &:hover {
+                  color: #007bff;
+                }
+              }
+
               .dropdown-menu {
                 position: static;
                 box-shadow: none;

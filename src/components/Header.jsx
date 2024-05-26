@@ -13,7 +13,7 @@ const Header = () => {
           <li><Link to="/alerts">Alerts</Link></li>
           <li><Link to="/social-feed">Social Feed</Link></li>
           <li className="dropdown">
-            <Link to="/profile">Profile</Link>
+            <div className="dropdown-toggle">Profile</div>
             <ul className="dropdown-menu">
               <li><Link to="/profile">View Profile</Link></li>
               <li><Link to="/friends">Friends</Link></li>
