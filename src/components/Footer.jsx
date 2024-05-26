@@ -1,26 +1,32 @@
+// Footer.jsx
 import './Footer.scss';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="content-guidelines">
-        <h4>Content Submission Guidelines</h4>
-        <p>
-          1. All content must be related to weather and appropriate for all ages.
-          2. No spam or advertising is allowed.
-          3. Please respect others and engage in constructive discussions.
-        </p>
+      <div className="footer-content">
+        <div className="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/guidelines">Content Submission Guidelines</a></li>
+            <li><a href="/moderation">Moderation Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/sources">Data Sources</a></li>
+            <li><a href="/maps">Map Providers</a></li>
+          </ul>
+        </div>
       </div>
-      <div className="moderation-policy">
-        <h4>Moderation Policy</h4>
-        <p>
-          We reserve the right to remove any content that violates our guidelines or is deemed inappropriate.
-          Repeated violations may result in account suspension or termination.
-        </p>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Weather App. All rights reserved.</p>
       </div>
-      <p>© 2023 Weather App. All rights reserved.</p>
-      <p>Data sources: National Weather Service, OpenWeatherMap</p>
-      <p>Map providers: Google Maps, Mapbox</p>
     </footer>
   );
 };

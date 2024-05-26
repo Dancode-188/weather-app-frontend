@@ -1,27 +1,48 @@
 // Footer.scss
-@import '../styles/variables';
+@import 'src/styles/variables.scss';
+@import 'src/styles/mixins.scss';
+@import 'src/styles/typography.scss';
+@import 'src/styles/utilities.scss';
 
 .footer {
-  padding: $spacing-medium;
   background-color: $secondary-color;
+  padding: $spacing-medium;
   text-align: center;
-  font-size: 0.9rem;
-  color: #fff;
 
-  .content-guidelines,
-  .moderation-policy {
-    margin-bottom: $spacing-medium;
+  .footer-content {
+    @include responsive-grid;
+    justify-items: center;
 
-    h4 {
-      margin-bottom: $spacing-small;
-    }
+    .footer-section {
+      h4 {
+        @extend h2;
+        margin-bottom: $spacing-small;
+      }
 
-    p {
-      margin-bottom: $spacing-small;
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: $spacing-small;
+        }
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+
+          &:hover {
+            color: $primary-color;
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 
-  p {
-    margin-bottom: $spacing-small;
+  .footer-bottom {
+    margin-top: $spacing-medium;
+    font-size: $font-size-small;
+    color: $text-color-secondary;
   }
 }
